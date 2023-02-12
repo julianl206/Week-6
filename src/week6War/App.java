@@ -15,7 +15,7 @@ public class App {
 	            player1.draw(deck);
 	            player2.draw(deck);
 	        }
-
+// create cases for the game for players to be able to score
 	        for (int i = 0; i < 26; i++) {
 	            Card card1 = player1.flip();
 	            Card card2 = player2.flip();
@@ -30,11 +30,12 @@ public class App {
 	            } else {
 	                System.out.println("Draw");
 	            }
+	            // keep track of points and winds per round 
 	            System.out.println("Player 1: " + player1.getScore() + " points");
 	            System.out.println("Player 2: " + player2.getScore() + " points");
 	            System.out.println();
 	        }
-
+	        // end game results draw p1 or p2 win
 	        if (player1.getScore() > player2.getScore()) {
 	            System.out.println("Player 1 wins the game with " + player1.getScore() + " points");
 	        } else if (player2.getScore() > player1.getScore()) {
